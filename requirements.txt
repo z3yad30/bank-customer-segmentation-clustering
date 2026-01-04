@@ -1,0 +1,8 @@
+# FILE: requirements.txt
+REQUIREMENTS_CONTENT: |
+  pandas
+  numpy
+  matplotlib
+  seaborn
+  scikit-learn
+  jupyter
