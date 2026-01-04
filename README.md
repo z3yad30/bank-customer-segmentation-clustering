@@ -1,31 +1,35 @@
-# bank-customer-segmentation-clustering
 README_CONTENT: |
-  # Bank Customer Segmentation using Unsupervised Learning
+  # Bank Customer Segmentation & Interactive Clustering App
 
-  ## Project Goal
-  The primary objective of this project is to group bank customers into distinct clusters based on their financial and behavioral characteristics. By identifying these segments, the bank can implement tailored marketing strategies to improve engagement and conversion rates.
+  ## Project Overview
+  This project uses unsupervised machine learning to segment bank customers based on their financial behavior. By identifying distinct groups—such as "High-Value Managers" or "Young Professionals"—banks can design more effective, personalized marketing strategies.
 
-  ## Dataset Description
-  The analysis is performed on the **Bank Marketing Dataset**, which includes client data such as:
-  * **Demographics**: Age, Job, Marital Status, Education.
-  * **Financial Standing**: Average yearly balance, credit default status, housing and personal loans.
-  * **Campaign History**: Contact type, day/month of last contact, duration, and previous campaign outcomes.
+  The project includes a complete data science pipeline in a Jupyter Notebook and an interactive **Streamlit Web Application** for real-time customer classification.
 
-  ## Technical Stack
-  * **Language**: Python
-  * **Libraries**: 
-    * `pandas`, `numpy`: Data manipulation and analysis.
-    * `matplotlib`, `seaborn`: Data visualization and Exploratory Data Analysis (EDA).
-    * `scikit-learn`: Implementation of clustering algorithms (K-Means/PCA).
+  ## Key Features
+  - **Comprehensive EDA**: Analysis of 45,211 customers, handling categorical encoding (Job, Marital, etc.) and numerical scaling.
+  - **Clustering Models**: Comparison of K-Means, DBSCAN, and Hierarchical Clustering.
+  - **Dimensionality Reduction**: Implementation of PCA (Principal Component Analysis) for 2D visualization of customer segments.
+  - **Interactive Deployment**: A Streamlit app that allows users to input customer details and receive an immediate cluster assignment with behavioral interpretations.
 
-  ## Project Workflow
-  1. **Exploratory Data Analysis (EDA)**: Understanding feature distributions, unique values in categorical features (e.g., 12 unique job titles), and handling negative balances.
-  2. **Data Preprocessing**: Cleaning, encoding categorical variables, and scaling numeric data.
-  3. **Clustering**: Applying unsupervised learning techniques to segment the customer base.
-  4. **Visualization**: Using PCA (Principal Component Analysis) to visualize clusters in 2D space.
+  ## Identified Customer Segments
+  Based on the analysis, customers are grouped into five key clusters:
+  - **Cluster 0**: Stable Working-Class Married Customers
+  - **Cluster 1**: Young Single Professionals
+  - **Cluster 2**: High-Value Married Managers
+  - **Cluster 3**: Students & Early-Career Prospects
+  - **Cluster 4**: Affluent Retired Customers
 
-  ## How to Run
-  1. Clone this repository.
-  2. Ensure the dataset `bank-full.csv` is located in a `Data/` folder.
-  3. Install dependencies: `pip install -r requirements.txt`
-  4. Run the Jupyter Notebook `06_task_03.ipynb`.
+  ## Repository Structure
+  - `06_task_03.ipynb`: Full data analysis, preprocessing, and model training pipeline.
+  - `app.py`: Streamlit application code for the web interface.
+  - `scaler.pkl` & `kmeans.pkl`: Trained model artifacts (required for the app).
+  - `bank-full.csv`: The dataset used for training.
+
+  ## How to Run the App
+  1. Clone the repository.
+  2. Install requirements: `pip install -r requirements.txt`
+  3. Launch the app: 
+     ```bash
+     streamlit run app.py
+     ```
