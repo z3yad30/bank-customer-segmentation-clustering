@@ -2,6 +2,10 @@
 
 A machine-learning project that groups bank customers into financial behavior segments using K-Means clustering. The project includes a Jupyter notebook for analysis and training, plus a Streamlit application for interactive cluster prediction.
 
+## Live Demo
+
+Try the deployed Streamlit application: [Bank Customer Segmentation](https://bankcustomer3egmentation.streamlit.app/)
+
 ## Project Files
 
 - `06_task_03.ipynb` - Data analysis, preprocessing, dimensionality reduction, clustering, and model export.
