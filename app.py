@@ -22,6 +22,14 @@ st.markdown("""
     .block-container { max-width: 1180px; padding: 2.5rem 3rem 4rem; }
     h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; color: var(--ink); }
     p, label, .stMarkdown, .stTextInput, .stNumberInput, .stSelectbox { font-family: 'DM Sans', sans-serif; }
+    [data-testid="stWidgetLabel"] p,
+    [data-testid="stWidgetLabel"] label,
+    [data-testid="stWidgetLabel"] div,
+    [data-testid="stSlider"] label,
+    [data-testid="stNumberInput"] label,
+    [data-testid="stSelectbox"] label { color: var(--ink) !important; opacity: 1 !important; }
+    [data-testid="stWidgetLabel"] p { font-weight: 600 !important; }
+    [data-testid="stCaptionContainer"] p { color: var(--muted) !important; opacity: 1 !important; }
     [data-testid="stHeader"] { background: transparent; }
     [data-testid="stMetric"] { background: white; border: 1px solid var(--line); padding: 1rem 1.1rem; border-radius: 12px; }
     [data-testid="stMetricLabel"] { color: var(--muted); }
